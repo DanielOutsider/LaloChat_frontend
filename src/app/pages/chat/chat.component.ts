@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-chat',
@@ -7,11 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
+  @ViewChild('sidenav') public sidenav: MatSidenav;
+
+  
   constructor() { }
   
-  @Input() navToogle;
 
   ngOnInit(): void {
+    
+  }
+
+  /* function public for toogle nav */
+  
+  public toogleNav(){
+    this.sidenav.toggle();
   }
 
 }
