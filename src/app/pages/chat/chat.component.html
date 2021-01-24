@@ -1,15 +1,15 @@
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" opened mode="side">
-      <p>Auto-resizing sidenav</p>
-      <button mat-raised-button>
-        Toggle extra text
-      </button>
+    <mat-drawer #sidenav class="example-sidenav" opened mode="side">
+  
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  
     </mat-drawer>
    
     <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
+      <button mat-raised-button color="warn" class="btn-toggle" (click)="toogleNav()">
+       <span  *ngIf="sidenav.opened"><</span> <span *ngIf="!sidenav.opened">></span>
       </button>
+      
     </div>
   
 </mat-drawer-container>
